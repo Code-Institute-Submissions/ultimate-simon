@@ -1,0 +1,55 @@
+#page-title {
+  font-family: sans-serif;
+  font-size: 6vh;
+  color: white;
+  padding: 0;
+  margin: 0;
+  height: 10vh;
+  width: 85vh;
+  background-color: black; }
+
+#page {
+  padding: 0;
+  height: 85vh;
+  margin: 0;
+  border: 1px black; }
+
+#panel {
+  background-color: black;
+  height: 85vh;
+  width: 85vh; }
+
+#red-button, #yellow-button, #green-button, #blue-button {
+  border: 1px solid #000;
+  border-radius: 50%;
+  height: 42%;
+  width: 42%;
+  position: relative;
+  margin: 3%;
+  float: left; }
+
+#red-button {
+  background-color: RED; }
+
+#yellow-button {
+  background-color: YELLOW; }
+
+#green-button {
+  background-color: GREEN; }
+
+#blue-button {
+  background-color: BLUE; }
+
+#start-button {
+  background-color: purple;
+  color: black;
+  border-radius: 5px;
+  width: 25%;
+  height: 7%;
+  font-size: 100%;
+  float: center; }
+
+.center-item {
+  text-align: center; }
+
+/*# sourceMappingURL=style.css.map */
