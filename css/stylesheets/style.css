@@ -1,55 +1,93 @@
+.center-item {
+  text-align: center; }
+
 #page-title {
   font-family: sans-serif;
-  font-size: 6vh;
+  font-size: 4vmin;
+  display: flex;
+  justify-content: center;
   color: white;
   padding: 0;
   margin: 0;
   height: 10vh;
-  width: 85vh;
+  width: 100vw;
   background-color: black; }
 
 #page {
-  padding: 0;
-  height: 85vh;
+  height: 80vh;
+  width: 100vw;
   margin: 0;
-  border: 1px black; }
+  padding: 0; }
 
-#panel {
+#button-panel {
+  width: 100vw;
+  padding: 0;
+  margin: 0;
   background-color: black;
-  height: 85vh;
-  width: 85vh; }
+  display: flex;
+  justify-content: center; }
 
-#red-button, #yellow-button, #green-button, #blue-button {
+#options-panel {
+  background-color: darkgrey;
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  height: 10vmin; }
+
+footer {
+  height: 10vh; }
+
+#red-button, #yellow-button, #green-button, #blue-button, #purple-button, #brown-button {
   border: 1px solid #000;
   border-radius: 50%;
-  height: 42%;
-  width: 42%;
-  position: relative;
-  margin: 3%;
-  float: left; }
+  align: center;
+  height: 20vh;
+  width: 20vh;
+  display: relative;
+  margin: 10vmin; }
 
 #red-button {
-  background-color: RED; }
+  background-color: #ff0000; }
 
 #yellow-button {
-  background-color: YELLOW; }
+  background-color: #ffff00; }
 
 #green-button {
-  background-color: GREEN; }
+  background-color: #009900; }
 
 #blue-button {
-  background-color: BLUE; }
+  background-color: #0000ff; }
+
+#purple-button {
+  background-color: #800080;
+  display: none; }
+
+#brown-button {
+  background-color: #804000;
+  display: none; }
 
 #start-button {
-  background-color: purple;
+  background-color: white;
   color: black;
   border-radius: 5px;
-  width: 25%;
-  height: 7%;
-  font-size: 100%;
-  float: center; }
+  width: 20vmin;
+  height: 5vmin;
+  font-size: 4vmin;
+  margin: 2vmin;
+  float: left;
+  display: flex;
+  justify-content: center; }
 
-.center-item {
-  text-align: center; }
+#options-button {
+  background-color: white;
+  color: black;
+  border-radius: 5px;
+  width: 20vmin;
+  height: 5vmin;
+  font-size: 4vmin;
+  float: left;
+  margin: 2vmin;
+  display: flex;
+  justify-content: center; }
 
 /*# sourceMappingURL=style.css.map */
