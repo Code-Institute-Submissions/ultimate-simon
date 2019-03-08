@@ -40,7 +40,7 @@ footer {
 #red-button, #yellow-button, #green-button, #blue-button, #purple-button, #brown-button {
   border: 1px solid #000;
   border-radius: 50%;
-  align: center;
+  justify-content: center;
   height: 20vh;
   width: 20vh;
   display: relative;
