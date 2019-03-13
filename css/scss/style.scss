@@ -1,15 +1,15 @@
 //****************************************** Button Variables **//
 $buttons: 6;
-$red: #ff0000;
+$red: #cc0000;
 $high-red: #ff3333;
 $yellow: #ffff00;
 $high-yellow: #ffff66;
-$green: #009900;
-$high-green: #00cc00;
+$green: #00cc00;
+$high-green: #33ff33;
 $blue: #0000ff;
 $high-blue: #3333ff;
-$purple: #800080;
-$high-purple: #cc00cc;
+$purple: #990099;
+$high-purple: #ff33ff;
 $brown: #804000;
 $high-brown: #b35900;
 
@@ -98,34 +98,66 @@ footer {
     margin: 10vmin;
 }
 
-#red-button {
+.red-button {
     background-color: $red;
     @extend %button-common;
 }
 
-#yellow-button {
+.high-red-button {
+    background-color: $high-red;
+    @extend %button-common;
+}
+
+.yellow-button {
     background-color: $yellow;
     @extend %button-common;
 }
 
-#green-button {
+.high-yellow-button {
+    background-color: $high-yellow;
+    @extend %button-common;
+}
+
+.green-button {
     background-color: $green;
     @extend %button-common;
 }
 
-#blue-button {
+.high-green-button {
+    background-color: $high-green;
+    @extend %button-common;
+}
+
+.blue-button {
     background-color: $blue;
     @extend %button-common;
 }
 
-#purple-button {
+.high-blue-button {
+    background-color: $high-blue;
+    @extend %button-common;
+}
+
+.purple-button {
     background-color: $purple;
     @extend %button-common;
     @include display-hide-button($buttons);
 }
 
-#brown-button {
+.high-purple-button {
+    background-color: $high-purple;
+    @extend %button-common;
+    @include display-hide-button($buttons);
+}
+
+.brown-button {
     background-color: $brown;
+    @extend %button-common;
+    @include display-hide-button($buttons);
+}
+
+.high-brown-button {
+    background-color: $high-brown;
     @extend %button-common;
     @include display-hide-button($buttons);
 }
