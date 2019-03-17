@@ -3,22 +3,22 @@ var $buttons = 6;
 
 function stopButton(buttonNo) {
   if (buttonNo == 0) {
-    $('.red-button').addClass('red-button');
+    $('#red-button').toggleClass('high-red-button-style');
   }
   else if (buttonNo == 1) {
-    $('.green-button').removeClass('high-green-button');
+    $('#green-button').toggleClass('high-green-button-style');
   }
   else if (buttonNo == 2) {
-    $('.yellow-button').removeClass('high-yellow-button');
+    $('#yellow-button').toggleClass('high-yellow-button-style');
   }
   else if (buttonNo == 3) {
-    $('.blue-button').removeClass('high-blue-button');
+    $('#blue-button').toggleClass('high-blue-button-style');
   }
   else if (buttonNo == 4) {
-    $('.purple-button').removeClass('high-purple-button');
+    $('#purple-button').toggleClass('high-purple-button-style');
   }
   else if (buttonNo == 5) {
-    $('.brown-button').removeClass('high-brown-button');
+    $('#brown-button').toggleClass('high-brown-button-style');
   }
 }
 
@@ -26,22 +26,22 @@ function stopButton(buttonNo) {
 
 function playButton(buttonNo) {
   if (buttonNo == 0) {
-    $('.red-button').addClass('high-red-button');
+    $('#red-button').toggleClass('high-red-button-style');
   }
   else if (buttonNo == 1) {
-    $('.green-button').addClass('high-green-button');
+    $('#green-button').toggleClass('high-green-button-style');
   }
   else if (buttonNo == 2) {
-    $('.yellow-button').addClass('high-yellow-button');
+    $('#yellow-button').toggleClass('high-yellow-button-style');
   }
   else if (buttonNo == 3) {
-    $('.blue-button').addClass('high-blue-button');
+    $('#blue-button').toggleClass('high-blue-button-style');
   }
   else if (buttonNo == 4) {
-    $('.purple-button').addClass('high-purple-button');
+    $('#purple-button').toggleClass('high-purple-button-style');
   }
   else if (buttonNo == 5) {
-    $('.brown-button').addClass('high-brown-button');
+    $('#brown-button').toggleClass('high-brown-button-style');
   }
 }
 
@@ -49,7 +49,7 @@ function playButton(buttonNo) {
 function playSequence(arrayToPlay) {
   for (var k = $noOfRounds; k--;) {
     playButton(arrayToPlay[k]);
-    setTimeout(function(){ stopButton(arrayToPlay[k]); }, 1000);
+    //setTimeout(function(){ stopButton(arrayToPlay[k]); }, 1000);
   }
 }
 

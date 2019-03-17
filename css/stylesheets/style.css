@@ -37,53 +37,53 @@
 footer {
   height: 10vh; }
 
-.red-button, .high-red-button, .yellow-button, .high-yellow-button, .green-button, .high-green-button, .blue-button, .high-blue-button, .purple-button, .high-purple-button, .brown-button, .high-brown-button {
-  border: 1px solid #000;
+.red-button-style, .high-red-button-style, .yellow-button-style, .high-yellow-button-style, .green-button-style, .high-green-button-style, .blue-button-style, .high-blue-button-style, .purple-button-style, .high-purple-button-style, .brown-button-style, .high-brown-button-style {
+  border: 1vmin solid grey;
   border-radius: 50%;
-  align: center;
   height: 15vh;
   width: 15vh;
+  margin: 10vmin;
   display: relative;
-  margin: 10vmin; }
+  align: left; }
 
-.red-button {
-  background-color: #cc0000; }
+.red-button-style {
+  background-color: red; }
 
-.high-red-button {
-  background-color: #ff3333; }
+.high-red-button-style {
+  background-color: pink; }
 
-.yellow-button {
-  background-color: #ffff00; }
+.yellow-button-style {
+  background-color: orange; }
 
-.high-yellow-button {
-  background-color: #ffff66; }
+.high-yellow-button-style {
+  background-color: yellow; }
 
-.green-button {
-  background-color: #00cc00; }
+.green-button-style {
+  background-color: green; }
 
-.high-green-button {
-  background-color: #33ff33; }
+.high-green-button-style {
+  background-color: lightgreen; }
 
-.blue-button {
-  background-color: #0000ff; }
+.blue-button-style {
+  background-color: darkblue; }
 
-.high-blue-button {
-  background-color: #3333ff; }
+.high-blue-button-style {
+  background-color: cyan; }
 
-.purple-button {
-  background-color: #990099;
+.purple-button-style {
+  background-color: purple;
   display: relative; }
 
-.high-purple-button {
-  background-color: #ff33ff;
+.high-purple-button-style {
+  background-color: lightgrey;
   display: relative; }
 
-.brown-button {
-  background-color: #804000;
+.brown-button-style {
+  background-color: brown;
   display: relative; }
 
-.high-brown-button {
-  background-color: #b35900;
+.high-brown-button-style {
+  background-color: darkgrey;
   display: relative; }
 
 #start-button {
