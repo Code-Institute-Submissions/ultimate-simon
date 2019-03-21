@@ -1,18 +1,11 @@
 //****************************************** Button Variables **//
 $buttons: 6;
 $red: red;
-$high-red: pink;
 $yellow: orange;
-$high-yellow: yellow;
 $green: green;
-$high-green: lightgreen;
 $blue: darkblue;
-$high-blue: cyan;
 $purple: purple;
-$high-purple: lightgrey;
 $brown: brown;
-$high-brown: darkgrey;
-
 
 .center-item {
     text-align: center;
@@ -96,15 +89,11 @@ footer {
     margin: 10vmin;
     display: relative;
     align: left;
+    opacity: 0.5;
 }
 
 .red-button-style {
     background-color: $red;
-    @extend %button-common;
-}
-
-.high-red-button-style {
-    background-color: $high-red;
     @extend %button-common;
 }
 
@@ -113,28 +102,13 @@ footer {
     @extend %button-common;
 }
 
-.high-yellow-button-style {
-    background-color: $high-yellow;
-    @extend %button-common;
-}
-
 .green-button-style {
     background-color: $green;
     @extend %button-common;
 }
 
-.high-green-button-style {
-    background-color: $high-green;
-    @extend %button-common;
-}
-
 .blue-button-style {
     background-color: $blue;
-    @extend %button-common;
-}
-
-.high-blue-button-style {
-    background-color: $high-blue;
     @extend %button-common;
 }
 
@@ -144,20 +118,8 @@ footer {
     @include display-hide-button($buttons);
 }
 
-.high-purple-button-style {
-    background-color: $high-purple;
-    @extend %button-common;
-    @include display-hide-button($buttons);
-}
-
 .brown-button-style {
     background-color: $brown;
-    @extend %button-common;
-    @include display-hide-button($buttons);
-}
-
-.high-brown-button-style {
-    background-color: $high-brown;
     @extend %button-common;
     @include display-hide-button($buttons);
 }

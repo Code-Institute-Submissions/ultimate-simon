@@ -37,53 +37,34 @@
 footer {
   height: 10vh; }
 
-.red-button-style, .high-red-button-style, .yellow-button-style, .high-yellow-button-style, .green-button-style, .high-green-button-style, .blue-button-style, .high-blue-button-style, .purple-button-style, .high-purple-button-style, .brown-button-style, .high-brown-button-style {
+.red-button-style, .yellow-button-style, .green-button-style, .blue-button-style, .purple-button-style, .brown-button-style {
   border: 1vmin solid grey;
   border-radius: 50%;
   height: 15vh;
   width: 15vh;
   margin: 10vmin;
   display: relative;
-  align: left; }
+  align: left;
+  opacity: 0.5; }
 
 .red-button-style {
   background-color: red; }
 
-.high-red-button-style {
-  background-color: pink; }
-
 .yellow-button-style {
   background-color: orange; }
-
-.high-yellow-button-style {
-  background-color: yellow; }
 
 .green-button-style {
   background-color: green; }
 
-.high-green-button-style {
-  background-color: lightgreen; }
-
 .blue-button-style {
   background-color: darkblue; }
-
-.high-blue-button-style {
-  background-color: cyan; }
 
 .purple-button-style {
   background-color: purple;
   display: relative; }
 
-.high-purple-button-style {
-  background-color: lightgrey;
-  display: relative; }
-
 .brown-button-style {
   background-color: brown;
-  display: relative; }
-
-.high-brown-button-style {
-  background-color: darkgrey;
   display: relative; }
 
 #start-button {
