@@ -1,5 +1,5 @@
 //****************************************** Button Variables **//
-$buttons: 6;
+$buttons: 4;
 $red: red;
 $yellow: orange;
 $green: green;
@@ -70,15 +70,15 @@ footer {
     }
 }
 
-@mixin display-hide-button($buttons) {
-
-    @if $buttons==4 {
-        display: none;
-    }
-    @if $buttons==6 {
-        display: relative;
-    }
-}
+//@mixin display-hide-button($buttons) {
+//
+//    @if $buttons==4 {
+//        display: none;
+//    }
+//    @if $buttons==6 {
+//        display: relative;
+ //   }
+//}
 
 
 //*********************************************** Button Styles **//

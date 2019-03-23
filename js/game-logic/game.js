@@ -1,5 +1,3 @@
-var $noOfRounds = 10;
-var $buttons = 6;
 
 function playButton(buttonNo) {
   const synth = new Tone.Synth();
@@ -34,7 +32,7 @@ function playButton(buttonNo) {
 
 
 function playSequence(arrayToPlay) {
-  for (var k = 0; k < $noOfRounds; k++) {
+  for (var k = 0; k < gameParameters.noOfRounds; k++) {
     var delay = k * 2500;
     setTimeout(playButton, delay, arrayToPlay[k]);
   }
@@ -47,8 +45,8 @@ function startGame() {
   var revPlayArray = {};
   var j = 0;
 
-  for (var i = $noOfRounds; i--;) {
-    noToLoad = Math.trunc(Math.random() * ($buttons - 0.001));
+  for (var i = gameParameters.noOfRounds; i--;) {
+    noToLoad = Math.trunc(Math.random() * (gameParameters.noOfButtons - 0.001));
     fwdPlayArray[i] = noToLoad;
     console.log(fwdPlayArray[i] + 'fwd' + i);
     revPlayArray[j] = noToLoad;
