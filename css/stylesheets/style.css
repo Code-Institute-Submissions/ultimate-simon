@@ -40,8 +40,6 @@ footer {
 .red-button-style, .yellow-button-style, .green-button-style, .blue-button-style, .purple-button-style, .brown-button-style {
   border: 1vmin solid grey;
   border-radius: 50%;
-  height: 15vh;
-  width: 15vh;
   margin: 10vmin;
   display: relative;
   align: left;
@@ -60,12 +58,10 @@ footer {
   background-color: darkblue; }
 
 .purple-button-style {
-  background-color: purple;
-  display: relative; }
+  background-color: purple; }
 
 .brown-button-style {
-  background-color: brown;
-  display: relative; }
+  background-color: brown; }
 
 #start-button {
   background-color: white;
