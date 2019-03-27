@@ -10,10 +10,18 @@ var gameParameters = {
 ///  And show either 4 or 6 buttons as per options, also adjust button size to suit
 ///  The number of buttons on screen
 
-$(window).on('orientation resize load', function configureButtons() {
+$(window).on('orientation resize load', function(){
+	configureButtons();
+});
+
+function configureButtons() {
 	var height = $(window).height();
 	var width = $(window).width();
 	if (gameParameters.noOfButtons == 6) {
+		$('#red-button').css({ 'height': '15vh', 'width': '15vh' });
+		$('#yellow-button').css({ 'height': '15vh', 'width': '15vh' });
+		$('#green-button').css({ 'height': '15vh', 'width': '15vh' });
+		$('#blue-button').css({ 'height': '15vh', 'width': '15vh' });
 		if (width > height) {
 			$('#purple-button-portrait').removeClass('purple-button-style');
 			$('#brown-button-portrait').removeClass('brown-button-style');
@@ -39,7 +47,7 @@ $(window).on('orientation resize load', function configureButtons() {
 		$('#green-button').css({ 'height': '20vh', 'width': '20vh' });
 		$('#blue-button').css({ 'height': '20vh', 'width': '20vh' });
 	}
-});
+}
 
 function labelRoundsButton() {
 	$('#Rounds-Button').empty();
@@ -71,6 +79,7 @@ function adjustNoOfButtons(){
 	else if (gameParameters.noOfButtons == 6){
 		gameParameters.noOfButtons = 4;
 	}
+	configureButtons();
 	LabelNoOfButtons();
 }
 
