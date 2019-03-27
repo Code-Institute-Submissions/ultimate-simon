@@ -63,25 +63,32 @@ footer {
 .brown-button-style {
   background-color: brown; }
 
-#start-button {
-  background-color: white;
-  color: black;
-  border-radius: 5px;
-  width: 20vmin;
-  height: 5vmin;
-  font-size: 4vmin;
-  margin: 2vmin;
-  float: left;
+#start-panel {
   display: flex;
   justify-content: center; }
 
-#options-button {
+#start-button {
+  background-color: lightgreen;
+  color: black;
+  border-radius: 10px;
+  width: 20vmin;
+  height: 5vmin;
+  font-size: 4vmin;
+  padding-bottom: 1%;
+  margin: 5px; }
+
+#start-button:hover {
+  background-color: #87D37C; }
+
+#Direction-Button,
+#No-Of-Buttons,
+#Rounds-Button {
   background-color: white;
   color: black;
   border-radius: 5px;
   width: 20vmin;
   height: 5vmin;
-  font-size: 4vmin;
+  font-size: 2vmin;
   float: left;
   margin: 2vmin;
   display: flex;

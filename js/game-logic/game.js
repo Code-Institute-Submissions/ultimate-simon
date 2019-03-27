@@ -31,11 +31,14 @@ function playButton(buttonNo) {
 
 
 function playSequence(arrayToPlay) {
-  for (var k = 0; k < gameParameters.noOfRounds; k++) {
+
+  for (var k = 0; k <= gameParameters.noOfRounds; k++) {
+    console.log(k);
     var delay = k * 2500;
     setTimeout(playButton, delay, arrayToPlay[k]);
-  }
-}
+  } /*for loop k*/
+
+} /* playSequence function*/
 
 
 function startGame() {
@@ -54,10 +57,6 @@ function startGame() {
     console.log(revPlayArray[j] + 'rev' + j);
     j++;
   }*/
-  if (gameParameters.playForward == true) {
-    playSequence(fwdPlayArray);
-  }
-  else {
-    playSequence(revPlayArray);
-  }
+  playSequence(fwdPlayArray);
+
 }

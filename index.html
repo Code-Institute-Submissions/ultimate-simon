@@ -5,31 +5,34 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	
+
 	<link rel="stylesheet" href="/css/stylesheets/style.css" type="text/css" />
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css" type="text/css" />
 	
 	<script rel="text/javascript" src="/cdn/jQuery/jquery-3.3.1.js"></script>
 	<script rel="text/javascript" src="/js/game-logic/game.js"></script>
 	<script rel="text/javascript" src="/js/ui-logic/ui.js"></script>
 	<script rel="text/javascript" src="/cdn/Tone/tone.js"></script>
-	
+	<script src="https://cdn.jsdelivr.net/gh/StephanWagner/jBox@v0.6.2/dist/jBox.all.min.js"></script>
+	<link href="https://cdn.jsdelivr.net/gh/StephanWagner/jBox@v0.6.2/dist/jBox.all.min.css" rel="stylesheet">
+
 	<title>Ultimate Simon</title>
 </head>
 
 <header>
 
-	<div class="row">
 
-		<div id="page-title">
 
-			<p>The Ultimate Simon Console</p>
-
-		</div>
-		<!-- page-title-->
+	<div id="start-panel">
+ 
+		<button id="start-button" onclick="startGame()">Start</button>
 
 	</div>
+	<!-- start-panel -->
+
+
 
 </header>
 
@@ -42,12 +45,12 @@
 
 			</div>
 			<!--green-button-->
-			
+
 			<div id="yellow-button" class="yellow-button-style">
 
 			</div>
 			<!--yellow-button-->
-			
+
 			<div id="purple-button-portrait" class="purple-button-style">
 
 			</div>
@@ -66,7 +69,7 @@
 
 			</div>
 			<!--blue-button-->
-			
+
 			<div id="brown-button-portrait" class="brown-button-style">
 
 			</div>
@@ -99,16 +102,28 @@
 
 
 	<div id="options-panel">
-		<button onclick="startGame()">Click me</button>
+
+
+		<button id="Rounds-Button" onclick="adjustRounds()"></button>
+		
+		<button id="Direction-Button" onclick="adjustDirection()"></button>
+		
+		<button id="No-Of-Buttons" onclick="adjustNoOfButtons()"></button>
+		
 	</div>
 	<!--options-panel-->
 
 
-
-
-
-
 </body>
+
+<script>
+	labelRoundsButton();
+	labelDirectionButton();
+	LabelNoOfButtons();
+</script>
+
+
+
 
 <footer>
 	<a class="fab fa-wikipedia-w"></a>
