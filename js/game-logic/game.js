@@ -37,7 +37,6 @@ function playSequence(arrayToPlay) {
     var delay = k * 2500;
     setTimeout(playButton, delay, arrayToPlay[k]);
   } /*for loop k*/
-
 } /* playSequence function*/
 
 
@@ -58,5 +57,4 @@ function startGame() {
     j++;
   }*/
   playSequence(fwdPlayArray);
-
 }

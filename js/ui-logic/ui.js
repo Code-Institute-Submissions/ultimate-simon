@@ -1,6 +1,6 @@
 var gameParameters = {
 	currentRound: 1,
-	noOfRounds: 12,
+	noOfRounds: 5,
 	noOfButtons: 4,
 	playForward: false
 };
@@ -94,17 +94,11 @@ function adjustDirection(){
 }
 
 function adjustRounds(){
-	var userLevels = parseInt(prompt("Please enter your required Number of Levels.  NB: Levels have to be between 5 and 50"));
-	
-	while (isNaN(userLevels) || userLevels < 6 || userLevels >50) {
-
-        if (isNaN(userLevels)) {
-            userLevels = parseInt(prompt("Please enter positive whole numbers only, between 5 & 50"));
-        }
-        else if (userLevels < 6 || userLevels > 50) {
-            userLevels = parseInt(prompt("Please enter a positive whole number between 5 & 50"));
-        }
-    }
-	gameParameters.noOfRounds=userLevels;
+	if (gameParameters.noOfRounds == 60){
+		gameParameters.noOfRounds = 5;
+	}
+	else {
+		gameParameters.noOfRounds += 5;
+	}
 	labelRoundsButton();
 }

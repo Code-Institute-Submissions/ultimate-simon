@@ -22,7 +22,6 @@ $brown: brown;
     height: 10vh;
     width: 100vw;
     background-color: black;
-
 }
 
 #page {
@@ -34,14 +33,12 @@ $brown: brown;
 
 
 #button-panel {
-
+    display: flex;
+    justify-content: center;
     width: 100vw;
     padding: 0;
     margin: 0;
     background-color: black;
-    display: flex;
-    justify-content: center;
-
 }
 
 #options-panel {
@@ -56,28 +53,12 @@ footer {
     height: 10vh;
 }
 
-//*********************************************** Mixins **//
-//@mixin button($buttons) {
-//    @if $buttons==4 {
-//        height: 20vh;
-//        width: 20vh;
-//    }
-//
-//    @if $buttons==6 {
-//        height: 15vh;
-//        width: 15vh;
-//    }
-//}
-//@mixin display-hide-button($buttons) {
-//
-//    @if $buttons==4 {
-//        display: none;
-//    }
-//    @if $buttons==6 {
-//        display: relative;
-//   }
-//}
-//*********************************************** Button Styles **//
+%button-common:hover {
+    opacity: 0.6;
+    transition: opacity .5s ease-in-out;
+}
+    
+
 %button-common {
     border: 1vmin solid grey;
     border-radius: 50%; //@include button($buttons);
@@ -127,14 +108,15 @@ footer {
     color: black;
     border-radius: 10px;
     width: 20vmin;
-    height: 5vmin;
+    height: 6vmin;
     font-size: 4vmin;
-    padding-bottom: 1%;
-    margin: 5px;
+    justify-content: center;
+    vertical-align: middle;
 }
 
 #start-button:hover {
     background-color: #87D37C;
+    transition: background-color .5s ease-in-out;
 }
 
 #Direction-Button,
@@ -150,4 +132,11 @@ footer {
     margin: 2vmin;
     display: flex;
     justify-content: center;
+}
+
+#Direction-Button:hover,
+#No-Of-Buttons:hover,
+#Rounds-Button:hover {
+    background-color: yellow;
+    transition: background-color .5s ease-in-out;
 }

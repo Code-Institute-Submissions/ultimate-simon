@@ -20,12 +20,12 @@
   padding: 0; }
 
 #button-panel {
+  display: flex;
+  justify-content: center;
   width: 100vw;
   padding: 0;
   margin: 0;
-  background-color: black;
-  display: flex;
-  justify-content: center; }
+  background-color: black; }
 
 #options-panel {
   background-color: darkgrey;
@@ -36,6 +36,10 @@
 
 footer {
   height: 10vh; }
+
+.red-button-style:hover, .yellow-button-style:hover, .green-button-style:hover, .blue-button-style:hover, .purple-button-style:hover, .brown-button-style:hover {
+  opacity: 0.6;
+  transition: opacity .5s ease-in-out; }
 
 .red-button-style, .yellow-button-style, .green-button-style, .blue-button-style, .purple-button-style, .brown-button-style {
   border: 1vmin solid grey;
@@ -72,13 +76,14 @@ footer {
   color: black;
   border-radius: 10px;
   width: 20vmin;
-  height: 5vmin;
+  height: 6vmin;
   font-size: 4vmin;
-  padding-bottom: 1%;
-  margin: 5px; }
+  justify-content: center;
+  vertical-align: middle; }
 
 #start-button:hover {
-  background-color: #87D37C; }
+  background-color: #87D37C;
+  transition: background-color .5s ease-in-out; }
 
 #Direction-Button,
 #No-Of-Buttons,
@@ -93,5 +98,11 @@ footer {
   margin: 2vmin;
   display: flex;
   justify-content: center; }
+
+#Direction-Button:hover,
+#No-Of-Buttons:hover,
+#Rounds-Button:hover {
+  background-color: yellow;
+  transition: background-color .5s ease-in-out; }
 
 /*# sourceMappingURL=style.css.map */
