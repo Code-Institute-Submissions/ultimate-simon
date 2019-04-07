@@ -5,6 +5,8 @@ var gameParameters = {
 	playForward: false
 };
 
+var userResponseArray = [];
+
 //// When page loads, resizes or changes orientation
 ///  Show/Hide Buttons to suit the screen width/Height ie Landscape and Portrait
 ///  And show either 4 or 6 buttons as per options, also adjust button size to suit
@@ -65,7 +67,6 @@ function labelDirectionButton() {
 	$('#Direction-Button').empty();
 	$('#Direction-Button').append("Direction: " + Direction);
 }
-
 
 function LabelNoOfButtons() {
 	$('#No-Of-Buttons').empty();
