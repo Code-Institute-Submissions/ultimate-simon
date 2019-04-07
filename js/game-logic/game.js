@@ -79,8 +79,8 @@ function startGame() {
   //var revPlayArray = {};
   // The following defines the array to play to the user 
   
-  var fwdPlayArray = [0, 1, 2, 3, 4, 5, 0, 1, 2, 3, 4, 5];
-  var revPlayArray = [5, 4, 3, 2, 1, 0, 5, 4, 3, 2, 1, 0];
+  var fwdPlayArray = [0, 1, 2, 3, 4, 0, 1, 2, 3, 4];
+  var revPlayArray = [4, 3, 2, 1, 0, 4, 3, 2, 1, 0];
   var j = 0;
 
   /* The following is a randomised array of numbers to play the buttons */
