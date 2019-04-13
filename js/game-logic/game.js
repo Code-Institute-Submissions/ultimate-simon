@@ -30,15 +30,6 @@ function playButton(buttonNo) { // takes button number from original array or fr
 }
 
 
-//function convertDivToNumber(divName) { // function to convert buton div name back into corresponding div number for playing button etc.
-//if (divName == "red-button") { return 0; }
-//else if (divName == "green-button") { return 1; }
-//else if (divName == "yellow-button") { return 2; }
-//else if (divName == "blue-button") { return 3; }
-//else if ((divName == "purple-button-portrait") || (divName == "purple-button-landscape")) { return 4; }
-//else if ((divName == "brown-button-portrait") || (divName == "brown-button-landscape")) { return 5; }
-//}
-
 function userSequence() {
   $(".simon-button").click(function() { //When user clicks a button div enters function to read response
     var divNumber = ($(this).data("myval"));
