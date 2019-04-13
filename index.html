@@ -12,9 +12,14 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css" type="text/css" />
 	
 	<script rel="text/javascript" src="cdn/jQuery/jquery-3.3.1.js"></script>
+<<<<<<< HEAD
 	<script rel="text/javascript" src="js/app-state.js"></script>
 	<script rel="text/javascript" src="js/game-logic/game.js"></script>
+=======
+	<script rel="text/javascript" src="js/game-logic/app-state.js"></script>
+>>>>>>> a78ee176f846ac5f5f3d45f4532f49b0bd57662e
 	<script rel="text/javascript" src="js/ui-logic/ui.js"></script>
+	<script rel="text/javascript" src="js/game-logic/game.js"></script>
 	<script rel="text/javascript" src="cdn/Tone/tone.js"></script>
 	<script src="https://cdn.jsdelivr.net/gh/StephanWagner/jBox@v0.6.2/dist/jBox.all.min.js"></script>
 	<link href="https://cdn.jsdelivr.net/gh/StephanWagner/jBox@v0.6.2/dist/jBox.all.min.css" rel="stylesheet">
@@ -42,17 +47,17 @@
 
 	<div id="button-panel">
 		<div class="row">
-			<div id="green-button" class="green-button-style">
+			<div id="green-button" class="green-button-style simon-button" data-myval="1">
 
 			</div>
 			<!--green-button-->
 
-			<div id="yellow-button" class="yellow-button-style">
+			<div id="yellow-button" class="yellow-button-style simon-button" data-myval="2">
 
 			</div>
 			<!--yellow-button-->
 
-			<div id="purple-button-portrait" class="purple-button-style">
+			<div id="purple-button-portrait" class="purple-button-style simon-button" data-myval="4">
 
 			</div>
 			<!--purple-button-->
@@ -61,17 +66,17 @@
 
 		<div class="row">
 
-			<div id="red-button" class="red-button-style">
+			<div id="red-button" class="red-button-style simon-button" data-myval="0">
 
 			</div>
 			<!--red-button-->
 
-			<div id="blue-button" class="blue-button-style">
+			<div id="blue-button" class="blue-button-style simon-button" data-myval="3">
 
 			</div>
 			<!--blue-button-->
 
-			<div id="brown-button-portrait" class="brown-button-style">
+			<div id="brown-button-portrait" class="brown-button-style simon-button" data-myval="5">
 
 			</div>
 			<!--brown-button-->
@@ -82,12 +87,12 @@
 
 		<div class="row">
 
-			<div id="purple-button-landscape" class="purple-button-style">
+			<div id="purple-button-landscape" class="purple-button-style simon-button" data-myval="4">
 
 			</div>
 			<!--purple-button-->
 
-			<div id="brown-button-landscape" class="brown-button-style">
+			<div id="brown-button-landscape" class="brown-button-style simon-button" data-myval="5">
 				
 			</div>
 			<!--brown-button-->
@@ -120,7 +125,11 @@
 <script>
 	labelRoundsButton(gameParameters.noOfRounds);
 	labelDirectionButton(gameParameters.playForward);
+<<<<<<< HEAD
 	LabelNoOfButtons(gameParameters.noOfButtons);
+=======
+	labelNoOfButtons(gameParameters.noOfButtons);
+>>>>>>> a78ee176f846ac5f5f3d45f4532f49b0bd57662e
 </script>
 
 
