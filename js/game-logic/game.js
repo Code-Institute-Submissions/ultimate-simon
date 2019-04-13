@@ -30,13 +30,21 @@ function playButton(buttonNo) { // takes button number from original array or fr
 }
 
 
-function userSequence() {
+function userSequence(arrayInUse, callPlaySequence) {
   $(".simon-button").click(function() { //When user clicks a button div enters function to read response
     var divNumber = ($(this).data("myval"));
     playButton(divNumber); // calls the function to light the button and play the sound
     userResponseArray.push(divNumber); //stores this clicked button div number in an array to check response against sequence later
-    console.log("div pressed" + divNumber);
+    console.log("Array Length" + userResponseArray.length)
+    //console.log("fn current round" + currentRound)
+    console.log("parameters current round" + gameParameters.currentRound)
+    if (userResponseArray.length == gameParameters.currentRound) {
+      gameParameters.currentRound += 1;
+      userResponseArray = [];
+      setTimeout(callPlaySequence, 3000, arrayInUse);
+    }
   });
+
 }
 
 function playSequence(arrayToPlay) {
@@ -53,8 +61,8 @@ function startGame(Parameters) {
   //var revPlayArray = {};
   // The following defines the array to play to the user 
 
-  var fwdPlayArray = [0, 1, 2, 3, 4, 0, 1, 2, 3, 4];
-  var revPlayArray = [4, 3, 2, 1, 0, 4, 3, 2, 1, 0];
+  var fwdPlayArray = [0, 1, 2, 3, 4, 5, 0, 1, 2, 3, 4, 5];
+  var revPlayArray = [5, 4, 3, 2, 1, 0, 5, 4, 3, 2, 1, 0];
   var j = 0;
 
   /* The following is a randomised array of numbers to play the buttons */
@@ -68,6 +76,6 @@ function startGame(Parameters) {
     console.log(revPlayArray[j] + 'rev' + j);
     j++;
   }*/
-  playSequence(fwdPlayArray);  // Uses the array defined to play the buttons for the user to copy
-  userSequence(fwdPlayArray, playSequence);  // Looks to read the response for the user
+  playSequence(fwdPlayArray); // Uses the array defined to play the buttons for the user to copy
+  userSequence(fwdPlayArray, playSequence); // Looks to read the response for the user
 }
