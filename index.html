@@ -12,6 +12,7 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css" type="text/css" />
 	
 	<script rel="text/javascript" src="cdn/jQuery/jquery-3.3.1.js"></script>
+	<script rel="text/javascript" src="js/app-state.js"></script>
 	<script rel="text/javascript" src="js/game-logic/game.js"></script>
 	<script rel="text/javascript" src="js/ui-logic/ui.js"></script>
 	<script rel="text/javascript" src="cdn/Tone/tone.js"></script>
@@ -104,11 +105,11 @@
 	<div id="options-panel">
 
 
-		<button id="Rounds-Button" onclick="adjustRounds()"></button>
+		<button id="Rounds-Button" onclick="adjustRounds(gameParameters.noOfRounds)"></button>
 		
-		<button id="Direction-Button" onclick="adjustDirection()"></button>
+		<button id="Direction-Button" onclick="adjustDirection(gameParameters.playForward)"></button>
 		
-		<button id="No-Of-Buttons" onclick="adjustNoOfButtons()"></button>
+		<button id="No-Of-Buttons" onclick="adjustNoOfButtons(gameParameters.noOfButtons)"></button>
 		
 	</div>
 	<!--options-panel-->
@@ -117,9 +118,9 @@
 </body>
 
 <script>
-	labelRoundsButton();
-	labelDirectionButton();
-	LabelNoOfButtons();
+	labelRoundsButton(gameParameters.noOfRounds);
+	labelDirectionButton(gameParameters.playForward);
+	LabelNoOfButtons(gameParameters.noOfButtons);
 </script>
 
 

@@ -1,12 +1,3 @@
-var gameParameters = {
-	currentRound: 1,
-	noOfRounds: 5,
-	noOfButtons: 4,
-	playForward: false
-};
-
-var userResponseArray = [];
-
 //// When page loads, resizes or changes orientation
 ///  Show/Hide Buttons to suit the screen width/Height ie Landscape and Portrait
 ///  And show either 4 or 6 buttons as per options, also adjust button size to suit
@@ -16,10 +7,10 @@ $(window).on('orientation resize load', function(){
 	configureButtons();
 });
 
-function configureButtons() {
+function configureButtons(noOfButtons) {
 	var height = $(window).height();
 	var width = $(window).width();
-	if (gameParameters.noOfButtons == 6) {
+	if (noOfButtons == 6) {
 		$('#red-button').css({ 'height': '15vh', 'width': '15vh' });
 		$('#yellow-button').css({ 'height': '15vh', 'width': '15vh' });
 		$('#green-button').css({ 'height': '15vh', 'width': '15vh' });
@@ -51,55 +42,55 @@ function configureButtons() {
 	}
 }
 
-function labelRoundsButton() {
+function labelRoundsButton(Rounds) {
 	$('#Rounds-Button').empty();
-	$('#Rounds-Button').append(gameParameters.noOfRounds + " Rounds");
+	$('#Rounds-Button').append(Rounds + " Rounds");
 }
 
-function labelDirectionButton() {
-	var Direction;
-	if (gameParameters.playForward == true) {
-		Direction = "Fwd";
+function labelDirectionButton(playFwd) {
+	var direction ;
+	if (playFwd == true) {
+		direction = "Fwd";
 	}
 	else {
-		Direction = "Rev";
+		direction = "Rev";
 	}
 	$('#Direction-Button').empty();
-	$('#Direction-Button').append("Direction: " + Direction);
+	$('#Direction-Button').append("Direction: " + direction);
 }
 
-function LabelNoOfButtons() {
+function LabelNoOfButtons(noOfButtons) {
 	$('#No-Of-Buttons').empty();
-	$('#No-Of-Buttons').append(gameParameters.noOfButtons + " Buttons");
+	$('#No-Of-Buttons').append(noOfButtons + " Buttons");
 }
 
-function adjustNoOfButtons(){
-	if (gameParameters.noOfButtons == 4){
+function adjustNoOfButtons(noOfButtons){
+	if (noOfButtons == 4){
 		gameParameters.noOfButtons = 6;
 	}
-	else if (gameParameters.noOfButtons == 6){
-		gameParameters.noOfButtons = 4;
+	else if (noOfButtons == 6){
+			 gameParameters.noOfButtons = 4;
 	}
-	configureButtons();
-	LabelNoOfButtons();
+	configureButtons(gameParameters.noOfButtons);
+	LabelNoOfButtons(gameParameters.noOfButtons);
 }
 
-function adjustDirection(){
-	if (gameParameters.playForward == true){
+function adjustDirection(playFwd){
+	if (playFwd == true){
 		gameParameters.playForward = false;
 	}
-	else if (gameParameters.playForward == false){
+	else if (playFwd == false){
 		gameParameters.playForward = true;
 	}
-	labelDirectionButton();
+	labelDirectionButton(gameParameters.playForward);
 }
 
-function adjustRounds(){
-	if (gameParameters.noOfRounds == 60){
+function adjustRounds(setRounds){
+	if (setRounds == 60){
 		gameParameters.noOfRounds = 5;
 	}
 	else {
 		gameParameters.noOfRounds += 5;
 	}
-	labelRoundsButton();
+	labelRoundsButton(gameParameters.noOfRounds);
 }
