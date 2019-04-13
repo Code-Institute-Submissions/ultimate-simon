@@ -7,19 +7,11 @@ $(window).on('orientation resize load', function() {
 	configureButtons(gameParameters.noOfButtons);
 });
 
-<<<<<<< HEAD
-function configureButtons(noOfButtons) {
-	var height = $(window).height();
-	var width = $(window).width();
-	if (noOfButtons == 6) {
-=======
-
 
 function configureButtons(buttonsInUse) {
 	var height = $(window).height();
 	var width = $(window).width();
 	if (buttonsInUse == 6) {
->>>>>>> a78ee176f846ac5f5f3d45f4532f49b0bd57662e
 		$('#red-button').css({ 'height': '15vh', 'width': '15vh' });
 		$('#yellow-button').css({ 'height': '15vh', 'width': '15vh' });
 		$('#green-button').css({ 'height': '15vh', 'width': '15vh' });
@@ -51,17 +43,6 @@ function configureButtons(buttonsInUse) {
 	}
 }
 
-<<<<<<< HEAD
-function labelRoundsButton(Rounds) {
-	$('#Rounds-Button').empty();
-	$('#Rounds-Button').append(Rounds + " Rounds");
-}
-
-function labelDirectionButton(playFwd) {
-	var direction ;
-	if (playFwd == true) {
-		direction = "Fwd";
-=======
 function labelRoundsButton(roundsLabel) {
 	$('#Rounds-Button').empty();
 	$('#Rounds-Button').append(roundsLabel + " Rounds");
@@ -71,86 +52,56 @@ function labelDirectionButton(DirectionFwd) {
 	var Direction;
 	if (DirectionFwd == true) {
 		Direction = "Fwd";
->>>>>>> a78ee176f846ac5f5f3d45f4532f49b0bd57662e
 	}
 	else {
-		direction = "Rev";
+		Direction = "Rev";
 	}
 	$('#Direction-Button').empty();
-	$('#Direction-Button').append("Direction: " + direction);
+	$('#Direction-Button').append("Direction: " + Direction);
 }
 
-<<<<<<< HEAD
-function LabelNoOfButtons(noOfButtons) {
+function labelNoOfButtons(noOfButtons) {
 	$('#No-Of-Buttons').empty();
 	$('#No-Of-Buttons').append(noOfButtons + " Buttons");
 }
 
-function adjustNoOfButtons(noOfButtons){
-	if (noOfButtons == 4){
-		gameParameters.noOfButtons = 6;
-	}
-	else if (noOfButtons == 6){
-			 gameParameters.noOfButtons = 4;
-	}
-	configureButtons(gameParameters.noOfButtons);
-	LabelNoOfButtons(gameParameters.noOfButtons);
-}
-
-function adjustDirection(playFwd){
-	if (playFwd == true){
+function adjustDirection(playFwd) {
+	if (playFwd == true) {
 		gameParameters.playForward = false;
 	}
-	else if (playFwd == false){
+	else if (playFwd == false) {
 		gameParameters.playForward = true;
 	}
 	labelDirectionButton(gameParameters.playForward);
 }
 
-function adjustRounds(setRounds){
-	if (setRounds == 60){
-		gameParameters.noOfRounds = 5;
-=======
-function labelNoOfButtons(buttonsLabel) {
-	$('#No-Of-Buttons').empty();
-	$('#No-Of-Buttons').append(buttonsLabel + " Buttons");
-}
-
 function adjustNoOfButtons(buttonsUsed) {
 	if (buttonsUsed == 4) {
-		buttonsUsed = 6;
+		gameParameters.noOfButtons = 6;
 	}
 	else if (buttonsUsed == 6) {
-		buttonsUsed = 4;
+		gameParameters.noOfButtons = 4;
 	}
-	labelNoOfButtons(buttonsUsed);
-	configureButtons(buttonsUsed);
-	gameParameters.noOfButtons = buttonsUsed;
+	labelNoOfButtons(gameParameters.noOfButtons);
+	configureButtons(gameParameters.noOfButtons);
 }
 
 function adjustDirection(FwdDirection) {
 	if (FwdDirection == true) {
-		FwdDirection = false;
+		gameParameters.playForward = false;
 	}
 	else if (FwdDirection == false) {
-		FwdDirection = true;
+		gameParameters.playForward = true;
 	}
-	labelDirectionButton(FwdDirection);
-	gameParameters.playForward = FwdDirection;
+	labelDirectionButton(gameParameters.playForward);
 }
 
 function adjustRounds(roundsToPlay) {
 	if (roundsToPlay == 60) {
-		roundsToPlay = 5;
->>>>>>> a78ee176f846ac5f5f3d45f4532f49b0bd57662e
+		gameParameters.noOfRounds = 5;
 	}
 	else {
-		roundsToPlay += 5;
+		gameParameters.noOfRounds += 5;
 	}
-<<<<<<< HEAD
 	labelRoundsButton(gameParameters.noOfRounds);
-=======
-	labelRoundsButton(roundsToPlay);
-	gameParameters.noOfRounds = roundsToPlay;
->>>>>>> a78ee176f846ac5f5f3d45f4532f49b0bd57662e
 }

@@ -39,18 +39,6 @@ function playButton(buttonNo) { // takes button number from original array or fr
 //else if ((divName == "brown-button-portrait") || (divName == "brown-button-landscape")) { return 5; }
 //}
 
-<<<<<<< HEAD
-function userSequence(arraytoPlay, callPlaySequence) {
-  $("div div div").click(function() {         //When user clicks a button div enters function to read response
-    var divClicked = this.id;                 //REads the name of the button div clicked eg. red-button
-    var divNumber = convertDivToNumber(divClicked);   //calls function to convert the button div name into the corresponding number
-    playButton(divNumber);                            // calls the function to light the button and play the sound
-    userResponseArray.push(divNumber);                //stores this clicked button div number in an array to check response against sequence later
-    console.log("div pressed" + divNumber);
-  });
-  if(userResponseArray.length == )
-  callPlaySequence(arrayToPlay);
-=======
 function userSequence() {
   $(".simon-button").click(function() { //When user clicks a button div enters function to read response
     var divNumber = ($(this).data("myval"));
@@ -58,7 +46,6 @@ function userSequence() {
     userResponseArray.push(divNumber); //stores this clicked button div number in an array to check response against sequence later
     console.log("div pressed" + divNumber);
   });
->>>>>>> a78ee176f846ac5f5f3d45f4532f49b0bd57662e
 }
 
 function playSequence(arrayToPlay) {
@@ -67,26 +54,6 @@ function playSequence(arrayToPlay) {
     var delay = k * 2500; // calculates delay required to have the buttons play in sequence and not together.
     setTimeout(playButton, delay, arrayToPlay[k]); // plays the current button in the array with the delay calculate
   } /*for loop k*/
-<<<<<<< HEAD
-  
-=======
-
-
-  // This is where my major issue is, This method was suggested by one of the tutors.  I am trying to stall the code so that the next round will
-  // not play until the user has given their attempt at the current round.  In my head this should keep recalling the userSequence function until
-  // the number of user clicks has reached the current round.  But the code ploughs on!!
-
-
-  //if (userResponseArray < gameParameters.currentRound) { // If the user hasn't clicked the full sequence recall the userSequence function every 250ms to stall code and 
-  //  setTimeout(userSequence, 250); // wait until they have given the full response before the next round is started.   
- // }
-
-  if (gameParameters.currentRound < gameParameters.noOfRounds) {
-    setTimeout(playSequence, 250, arrayToPlay); //  If the number of current Round is less than the total rounds then play the next round
-    gameParameters.currentRound++; //  increment to next round
-  }
-
->>>>>>> a78ee176f846ac5f5f3d45f4532f49b0bd57662e
 } /* playSequence function*/
 
 function startGame(Parameters) {
@@ -110,11 +77,6 @@ function startGame(Parameters) {
     console.log(revPlayArray[j] + 'rev' + j);
     j++;
   }*/
-<<<<<<< HEAD
   playSequence(fwdPlayArray);  // Uses the array defined to play the buttons for the user to copy
   userSequence(fwdPlayArray, playSequence);  // Looks to read the response for the user
-=======
-  playSequence(fwdPlayArray); // Uses the array defined to play the buttons for the user to copy
-  userSequence(); // Looks to read the response for the user
->>>>>>> a78ee176f846ac5f5f3d45f4532f49b0bd57662e
 }
