@@ -32,7 +32,11 @@
   display: flex;
   justify-content: center;
   width: 100vw;
-  height: 10vmin; }
+  height: 10vmin;
+  font-family: sans-serif;
+  font-size: 4vmin;
+  color: red;
+  justify-content: center; }
 
 footer {
   height: 10vh; }
@@ -69,7 +73,10 @@ footer {
 
 #start-panel {
   display: flex;
-  justify-content: center; }
+  justify-content: center;
+  font-family: sans-serif;
+  font-size: 4vmin;
+  color: red; }
 
 #start-button {
   background-color: lightgreen;

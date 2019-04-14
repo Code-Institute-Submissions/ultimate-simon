@@ -7,7 +7,6 @@ $(window).on('orientation resize load', function() {
 	configureButtons(gameParameters.noOfButtons);
 });
 
-
 function configureButtons(buttonsInUse) {
 	var height = $(window).height();
 	var width = $(window).width();
@@ -105,3 +104,20 @@ function adjustRounds(roundsToPlay) {
 	}
 	labelRoundsButton(gameParameters.noOfRounds);
 }
+
+function hideButtons() {
+	$('#Rounds-Button').fadeOut(500);
+	$('#Direction-Button').fadeOut(500);
+	$('#No-Of-Buttons').fadeOut(500);
+	$('#start-button').fadeOut(500);
+}
+
+function showUserInfo(Round) {
+	$("#options-panel").text("Round: " + Round);
+}
+
+function showUserPrompt(Prompt) {
+	$("#start-panel").text(Prompt);
+}
+
+

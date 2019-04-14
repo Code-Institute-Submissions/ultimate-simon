@@ -1,3 +1,9 @@
+function resetGame() {
+  var fwdPlayArray = [];
+  var revPlayArray = [];
+  setTimeout(location.reload.bind(location), 2500);
+}
+
 function playButton(buttonNo) { // takes button number from original array or from user click to illuminate the corresponding button and play the tone.
   const synth = new Tone.Synth();
   synth.toMaster();
@@ -30,7 +36,10 @@ function playButton(buttonNo) { // takes button number from original array or fr
 }
 
 function checkUserInput(arrayToCheck, userArray, userResponse) {
-  if (arrayToCheck[gameParameters.currentSequenceIndex] !== userResponse) { alert("You Lose!"); }
+  if (arrayToCheck[gameParameters.currentSequenceIndex] !== userResponse) {
+    showUserPrompt("Sorry - You Lose!");
+    resetGame();
+  }
   console.log("currentRound: " + gameParameters.currentRound);
   console.log("arrayLength: " + userArray.length);
   if (userArray.length === gameParameters.currentRound) {
@@ -41,6 +50,7 @@ function checkUserInput(arrayToCheck, userArray, userResponse) {
 
 function userSequence(arrayInUse, callPlaySequence) {
   if (gameParameters.isWaitingForUser == true) {
+    showUserPrompt("Repeat")
     $(".simon-button").click(function() { //When user clicks a button div enters function to read response
       var divNumber = ($(this).data("myval"));
       playButton(divNumber); // calls the function to light the button and play the sound
@@ -50,13 +60,15 @@ function userSequence(arrayInUse, callPlaySequence) {
         gameParameters.currentRound += 1;
         userResponseArray = [];
         setTimeout(callPlaySequence, 3000, arrayInUse);
+        setTimeout(showUserInfo, 3000, gameParameters.currentRound);
       }
     });
   }
 
 }
 
-function playSequence(arrayToPlay) {
+function playSequence(arrayToPlay, cbUserSequence, cbplaySequence) {
+  showUserPrompt("Watch")
   gameParameters.isWaitingForUser = false;
   for (var k = 0; k < gameParameters.currentRound; k++) {
     console.log(k);
@@ -64,12 +76,14 @@ function playSequence(arrayToPlay) {
     setTimeout(playButton, delay, arrayToPlay[k]); // plays the current button in the array with the delay calculate
   } /*for loop k*/
   gameParameters.isWaitingForUser = true;
+  cbUserSequence(arrayToPlay, cbplaySequence);
 } /* playSequence function*/
 
 function startGame(Parameters) {
+  hideButtons();
+  $('#Rounds-Button').show(500);
+  showUserInfo(gameParameters.currentRound);
   var noToLoad = 0;
-  //var fwdPlayArray = {};
-  //var revPlayArray = {};
   // The following defines the array to play to the user 
 
   var fwdPlayArray = [0, 1, 2, 3, 4, 5, 0, 1, 2, 3, 4, 5];
@@ -87,6 +101,6 @@ function startGame(Parameters) {
     console.log(revPlayArray[j] + 'rev' + j);
     j++;
   }*/
-  playSequence(fwdPlayArray); // Uses the array defined to play the buttons for the user to copy
-  userSequence(fwdPlayArray, playSequence); // Looks to read the response for the user
+  playSequence(fwdPlayArray, userSequence, playSequence); // Uses the array defined to play the buttons for the user to copy
+  //userSequence(fwdPlayArray, playSequence); // Looks to read the response for the user
 }
