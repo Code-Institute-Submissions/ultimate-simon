@@ -10,7 +10,7 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css" type="text/css" />
-	
+
 	<script rel="text/javascript" src="cdn/jQuery/jquery-3.3.1.js"></script>
 	<script rel="text/javascript" src="js/app-state.js"></script>
 	<script rel="text/javascript" src="js/ui-logic/ui.js"></script>
@@ -27,8 +27,16 @@
 
 
 	<div id="start-panel">
- 
+
+		<a href="https://en.wikipedia.org/wiki/Simon_(game)" target="_blank">History</a>
+
 		<button id="start-button" onclick="startGame(gameParameters)">Start</button>
+
+	    <button id="instructions-button" onclick="">Instructions</button>
+
+		</div>
+
+
 
 	</div>
 	<!-- start-panel -->
@@ -88,7 +96,7 @@
 			<!--purple-button-->
 
 			<div id="brown-button-landscape" class="brown-button-style simon-button" data-myval="5">
-				
+
 			</div>
 			<!--brown-button-->
 
@@ -106,11 +114,11 @@
 
 
 		<button id="Rounds-Button" onclick="adjustRounds(gameParameters.noOfRounds)"></button>
-		
+
 		<button id="Direction-Button" onclick="adjustDirection(gameParameters.playForward)"></button>
-		
+
 		<button id="No-Of-Buttons" onclick="adjustNoOfButtons(gameParameters.noOfButtons)"></button>
-		
+
 	</div>
 	<!--options-panel-->
 

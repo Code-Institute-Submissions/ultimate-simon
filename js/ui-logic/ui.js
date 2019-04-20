@@ -7,6 +7,31 @@ $(window).on('orientation resize load', function() {
 	configureButtons(gameParameters.noOfButtons);
 });
 
+function loserLoser(cbResetGame, buttonsInUse) {
+	var i = 0;
+	do {
+		var delay = i * 250;
+		setTimeout(playButton, delay, 0, '200');
+		i++;
+	} while (i < buttonsInUse);
+	var delayReset = delay * 2.8;
+	setTimeout(cbResetGame, delayReset);
+}
+
+
+function winnerWinnerChickenDinner(cbResetGame, buttonsInUse) {
+	var i = 0;
+	do {
+		var delay = i * 250;
+		setTimeout(playButton, delay, i, '200');
+		i++;
+	} while (i < buttonsInUse);
+	var delayReset = delay * 2.8;
+	setTimeout(cbResetGame, delayReset);
+}
+
+
+
 function configureButtons(buttonsInUse) {
 	var height = $(window).height();
 	var width = $(window).width();
@@ -119,5 +144,3 @@ function showUserInfo(Round) {
 function showUserPrompt(Prompt) {
 	$("#start-panel").text(Prompt);
 }
-
-
