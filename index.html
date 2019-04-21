@@ -22,7 +22,6 @@
 	<!--<script src="https://cdn.jsdelivr.net/gh/StephanWagner/jBox@v0.6.2/dist/jBox.all.min.js"></script>
 	<link href="https://cdn.jsdelivr.net/gh/StephanWagner/jBox@v0.6.2/dist/jBox.all.min.css" rel="stylesheet">-->
 
-
 	<title>Ultimate Simon</title>
 </head>
 
@@ -48,15 +47,23 @@
 	</div>
 
 	<div id="start-panel">
-		
-			<button id="start-button" onclick="startGame(gameParameters)">Start</button>
-		
+
+		<button id="start-button" onclick="startGame(gameParameters)">Start</button>
+
 		<!-- Link to open the modal -->
-		
-			<p><a href="#ex1" rel="modal:open"><i class="fa fa-info-circle" aria-hidden="true"></i></a></p>
-		
+
+		<p><a href="#ex1" rel="modal:open"><i class="fa fa-info-circle" aria-hidden="true"></i></a></p>
+
 	</div>
 	<!--start-panel-->
+
+	<script>
+		$(document).ready(function() {
+			labelRoundsButton(gameParameters.noOfRounds);
+			labelDirectionButton(gameParameters.playForward);
+			labelNoOfButtons(gameParameters.noOfButtons);
+		});
+	</script>
 
 </header>
 
@@ -138,18 +145,5 @@
 
 
 </body>
-
-<script>
-	labelRoundsButton(gameParameters.noOfRounds);
-	labelDirectionButton(gameParameters.playForward);
-	labelNoOfButtons(gameParameters.noOfButtons);
-</script>
-
-
-
-
-<footer>
-
-</footer>
 
 </html>

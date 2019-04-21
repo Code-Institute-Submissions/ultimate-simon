@@ -49,8 +49,8 @@ footer {
   border: 1vmin solid grey;
   border-radius: 50%;
   margin: 10vmin;
-  display: relative;
-  align: left;
+  display: flex;
+  justify-content: left;
   opacity: 0.5; }
 
 .red-button-style {
