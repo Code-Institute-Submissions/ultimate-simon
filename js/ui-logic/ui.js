@@ -114,7 +114,7 @@ function adjustDirection(FwdDirection) {
 	if (FwdDirection == true) {
 		gameParameters.playForward = false;
 	}
-	else if (FwdDirection == false) {
+	else {
 		gameParameters.playForward = true;
 	}
 	labelDirectionButton(gameParameters.playForward);
@@ -144,3 +144,5 @@ function showUserInfo(Round) {
 function showUserPrompt(Prompt) {
 	$("#start-panel").text(Prompt);
 }
+
+

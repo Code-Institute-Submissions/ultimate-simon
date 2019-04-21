@@ -35,39 +35,58 @@ function playButton(buttonNo, delay) { // takes button number from original arra
 }
 
 function checkUserInput(arrayToCheck, userArray, userResponse) {
-  if (arrayToCheck[gameParameters.currentSequenceIndex] !== userResponse) {
+  if (gameParameters.playForward == true) {
+    SequenceCheck = gameParameters.currentSequenceIndex;
+  }
+  else {
+    SequenceCheck = gameParameters.currentSequenceIndexRev;
+  }
+
+  console.log("Current Sequence No " + SequenceCheck);
+  console.log("Current Index " + gameParameters.currentSequenceIndex);
+  console.log("Current Rev Index " + gameParameters.currentSequenceIndexRev);
+  
+
+  if (arrayToCheck[SequenceCheck] !== userResponse) {
     showUserPrompt("Sorry - You Lost!");
     loserLoser(resetGame, gameParameters.noOfButtons);
   }
+
   if (userArray.length === gameParameters.noOfRounds) {
     showUserPrompt("Congratulations - You WON!!");
     winnerWinnerChickenDinner(resetGame, gameParameters.noOfButtons);
   }
+
   console.log("currentRound: " + gameParameters.currentRound);
   console.log("arrayLength: " + userArray.length);
+
   if (userArray.length === gameParameters.currentRound) {
     gameParameters.currentSequenceIndex = 0;
+    gameParameters.currentSequenceIndexRev = gameParameters.currentRound;
   }
   else {
     gameParameters.currentSequenceIndex += 1;
+    gameParameters.currentSequenceIndexRev = gameParameters.currentSequenceIndexRev - 1;
   }
 
 }
 
-function userSequence(arrayInUse, callPlaySequence) {
+function userSequence(arrayInUse, cbPlaySequence) {
   $(".simon-button").click(function() { //When user clicks a button div enters function to read response
     if (gameParameters.isWaitingForUser == false) {
       showUserPrompt("Watch - Don't Click");
     }
     else {
       var divNumber = ($(this).data("myval"));
-      playButton(divNumber, '1000'); // calls the function to light the button and play the sound
-      userResponseArray.push(divNumber); //stores this clicked button div number in an array to check response against sequence later
+      playButton(divNumber, '1000');
+      // calls the function to light the button and play the sound
+      userResponseArray.push(divNumber);
+      //stores this clicked button div number in an array to check response against sequence later
       checkUserInput(arrayInUse, userResponseArray, divNumber);
       if (userResponseArray.length == gameParameters.currentRound) {
         gameParameters.currentRound += 1;
         userResponseArray = [];
-        setTimeout(callPlaySequence, 3000, arrayInUse);
+        setTimeout(cbPlaySequence, 3000, arrayInUse);
         setTimeout(showUserPrompt, 3000, "Watch");
         setTimeout(showUserInfo, 3000, gameParameters.currentRound);
       } /*if (userResponseArray.length == gameParameters.currentRound)*/
@@ -84,6 +103,7 @@ function playSequence(arrayToPlay, cbUserSequence, cbplaySequence) {
     var delay = k * 2500; // calculates delay required to have the buttons play in sequence and not together.
     setTimeout(playButton, delay, arrayToPlay[k], '1000'); // plays the current button in the array with the delay calculate
   } /*for loop k*/
+  gameParameters.currentSequenceIndexRev = (gameParameters.currentRound - 1);
   delay = gameParameters.currentRound * 2500;
   setTimeout(showUserPrompt, delay, "Repeat");
   setTimeout(function() { gameParameters.isWaitingForUser = true; }, delay)
@@ -96,7 +116,6 @@ function startGame(Parameters) {
   showUserInfo(gameParameters.currentRound);
   var noToLoad = 0;
   // The following defines the array to play to the user 
-
   var fwdPlayArray = [0, 1, 2, 3, 0, 1, 2, 3];
   var i = 0;
 

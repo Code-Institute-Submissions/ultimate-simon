@@ -16,37 +16,51 @@
 	<script rel="text/javascript" src="js/ui-logic/ui.js"></script>
 	<script rel="text/javascript" src="js/game-logic/game.js"></script>
 	<script rel="text/javascript" src="cdn/Tone/tone.js"></script>
-	<script src="https://cdn.jsdelivr.net/gh/StephanWagner/jBox@v0.6.2/dist/jBox.all.min.js"></script>
-	<link href="https://cdn.jsdelivr.net/gh/StephanWagner/jBox@v0.6.2/dist/jBox.all.min.css" rel="stylesheet">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+
+	<!--<script src="https://cdn.jsdelivr.net/gh/StephanWagner/jBox@v0.6.2/dist/jBox.all.min.js"></script>
+	<link href="https://cdn.jsdelivr.net/gh/StephanWagner/jBox@v0.6.2/dist/jBox.all.min.css" rel="stylesheet">-->
+
 
 	<title>Ultimate Simon</title>
 </head>
 
 <header>
 
-
-
-	<div id="start-panel">
-
-		<a href="https://en.wikipedia.org/wiki/Simon_(game)" target="_blank">History</a>
-
-		<button id="start-button" onclick="startGame(gameParameters)">Start</button>
-
-	    <button id="instructions-button" onclick="">Instructions</button>
-
-		</div>
-
+	<!-- JQuery Modal Adapted from code at jQueryModal.com -->
+	<div id="ex1" class="modal">
+		<span id="Wiki">
+				<a href="https://en.wikipedia.org/wiki/Simon_(game)" target="_blank"><i class="fab fa-wikipedia-w" aria-hidden="true"></i>ikipedia</a>
+			</span>
+		<p></p>
+		<p>The Rules To Simon Are Very Straight Forward. The Idea Of The Game Is To Repeat The Sequence Of Lights That Are Shown, By Clicking Them In The Same Sequence When Prompted To Repeat.</p>
+		<p>You Win The Game By Repeating Back The Complete Sequence, Set By The No Of Rounds Button At The Bottom Left Of The Home Page.</p>
+		<p>If The Direction Button At The Bottom Centre Of The Page Is Set To "Fwd", You Repeat The Buttons Back In The Same Sequence. To Make The Task Harder, This Button Can Be Set To "Rev", So You Have To Repeat Them Back In Reverse Order.</p>
+		<p>If You Want More Of A Challenge Still, The Number Of Buttons Can Be Increased From 4 Buttons To 6 Buttons.</p>
+		<p>For More Information On The History Of The Simon Game, Click On The Wikipedia Link Above To Look At Wikipedia's Information On The Game.</p>
+		<p></p>
+		<span id="close">
+				<a href="#" rel="modal:close">Close</a>
+		</span>
 
 
 	</div>
-	<!-- start-panel -->
 
-
+	<div id="start-panel">
+		
+			<button id="start-button" onclick="startGame(gameParameters)">Start</button>
+		
+		<!-- Link to open the modal -->
+		
+			<p><a href="#ex1" rel="modal:open"><i class="fa fa-info-circle" aria-hidden="true"></i></a></p>
+		
+	</div>
+	<!--start-panel-->
 
 </header>
 
 <body>
-
 
 	<div id="button-panel">
 		<div class="row">
@@ -135,7 +149,6 @@
 
 
 <footer>
-	<a class="fab fa-wikipedia-w"></a>
 
 </footer>
 

@@ -11,6 +11,8 @@ $brown: brown;
 }
 
 //****************************************** Page Styling **//
+
+
 #page-title {
     font-family: sans-serif;
     font-size: 4vmin;
@@ -39,7 +41,7 @@ $brown: brown;
     padding: 0;
     margin: 0;
     background-color: black;
-    
+
 }
 
 #options-panel {
@@ -62,7 +64,7 @@ footer {
     opacity: 0.6;
     transition: opacity .5s ease-in-out;
 }
-    
+
 
 %button-common {
     border: 1vmin solid grey;
@@ -105,7 +107,7 @@ footer {
 
 #start-panel {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     font-family: sans-serif;
     font-size: 4vmin;
     color: red;
@@ -118,7 +120,7 @@ footer {
     width: 20vmin;
     height: 6vmin;
     font-size: 4vmin;
-    justify-content: center;
+    margin: auto;
     vertical-align: middle;
 }
 
