@@ -4,6 +4,7 @@ var gameParameters = {
 	noOfButtons: 4,
 	playForward: true,
 	isWaitingForUser: false,
+	gameOver: false,
 	currentSequenceIndex: 0,
 	currentSequenceIndexRev: 0
 };
