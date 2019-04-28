@@ -134,5 +134,5 @@ function startGame(currentRound, noOfRounds, noOfButtons) {
 }
 
 function initiate() {
-  startGame(gameParameters.currentRound, gameParameters.noOfRounds, gameParameters.noOfButtons)
+  startGame(gameParameters.currentRound, gameParameters.noOfRounds, gameParameters.noOfButtons);
 }

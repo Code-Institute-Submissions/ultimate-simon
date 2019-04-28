@@ -11,10 +11,10 @@ function startGame(currentRound, noOfRounds, noOfButtons) {
     for (var i = noOfRounds; i--;) {                                                        // create array of button clicks for the number of rounds selected
       noToLoad = Math.trunc(Math.random() * (noOfButtons - 0.001));                         // calculate random number from 0 to 3 to load into array for button click
       console.log(noToLoad);
-      playArray.push(noToLoad); // store button click in array    
+      playArray.push(noToLoad);                                                             // store button click in array    
     }
     
-    return (playArray);
+    return (playArray.length);
   
  // playSequence(playArray, userSequence, playSequence);                                      // Uses the array defined to play the buttons for the user to copy
 }
