@@ -93,8 +93,7 @@ function playSequence(arrayToPlay, cbUserSequence, cbPlaySequence) {
   if (!gameParameters.gameOver) {
     showUserPrompt("Watch"); // prompt user to watch sequence to copy
     gameParameters.isWaitingForUser = false; // prevent user from clicking
-    for (var k = 0; k < gameParameters.currentRound; k++) { // up to no of buttons in current round
-      console.log(arrayToPlay[k]);
+    for (var k = 0; k < (gameParameters.currentRound); k++) { // up to no of buttons in current round
       var delay = k * 2500; // calculate delay required to have the buttons play in sequence and not together.
       setTimeout(playButton, delay, arrayToPlay[k], "1000"); // plays the current button in the array with the delay calculated
     } /*for loop k*/
@@ -124,7 +123,7 @@ function startGame(currentRound, noOfRounds, noOfButtons) {
   var playArray = [];
 
 
-  for (var i = (noOfRounds - 1); i--;) { // create array of button clicks for the number of rounds selected
+  for (var i = (noOfRounds); i--;) { // create array of button clicks for the number of rounds selected
     noToLoad = Math.trunc(Math.random() * (noOfButtons - 0.001)); // calculate random number from 0 to 3 to load into array for button click
     console.log(noToLoad);
     playArray.push(noToLoad); // store button click in array    
