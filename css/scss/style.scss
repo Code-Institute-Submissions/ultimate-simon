@@ -2,9 +2,16 @@
 $red: red;
 $yellow: orange;
 $green: green;
+$lightgreen: lightgreen;
 $blue: darkblue;
 $purple: purple;
 $brown: brown;
+$white: white;
+$black: black;
+$darkgrey: darkgrey;
+$grey: grey;
+$start-button-hover: #87D37C;
+
 
 .center-item {
     text-align: center;
@@ -18,12 +25,12 @@ $brown: brown;
     font-size: 4vmin;
     display: flex;
     justify-content: center;
-    color: white;
+    color: $white;
     padding: 0;
     margin: 0;
     height: 10vh;
     width: 100vw;
-    background-color: black;
+    background-color: $black;
 }
 
 #page {
@@ -40,12 +47,12 @@ $brown: brown;
     width: 100vw;
     padding: 0;
     margin: 0;
-    background-color: black;
+    background-color: $black;
 
 }
 
 #options-panel {
-    background-color: darkgrey;
+    background-color: $darkgrey;
     display: flex;
     justify-content: center;
     width: 100vw;
@@ -67,8 +74,8 @@ footer {
 
 
 %button-common {
-    border: 1vmin solid grey;
-    border-radius: 50%; //@include button($buttons);
+    border: 1vmin solid $grey;
+    border-radius: 50%; 
     margin: 10vmin;
     display: flex;
     justify-content: left;
@@ -114,8 +121,8 @@ footer {
 }
 
 #start-button {
-    background-color: lightgreen;
-    color: black;
+    background-color: $lightgreen;
+    color: $black;
     border-radius: 10px;
     width: 20vmin;
     height: 6vmin;
@@ -125,15 +132,15 @@ footer {
 }
 
 #start-button:hover {
-    background-color: #87D37C;
+    background-color: $start-button-hover;
     transition: background-color .5s ease-in-out;
 }
 
 #Direction-Button,
 #No-Of-Buttons,
 #Rounds-Button {
-    background-color: white;
-    color: black;
+    background-color: $white;
+    color: $black;
     border-radius: 5px;
     width: 20vmin;
     height: 5vmin;
@@ -147,6 +154,6 @@ footer {
 #Direction-Button:hover,
 #No-Of-Buttons:hover,
 #Rounds-Button:hover {
-    background-color: yellow;
+    background-color: $yellow;
     transition: background-color .5s ease-in-out;
 }

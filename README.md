@@ -17,7 +17,8 @@ I decided to choose the Simon Game Project, because this is a game that I rememb
 Both in its original format of remembering items laid out on a tray and then listing them, as well as the 
 electronic game which this website is based on.  The idea of this project was to highlight the ability to use 
 logic in different ways to allow the game to run as well as provided other functionality, like page layout 
-and option changes.  
+and option changes.  I have tried to keep the layout as original as possible, with the positioning of each button
+being the same as the original game and keeping the same musical notes for the individual buttons also.
 
 The idea of this game is to watch the sequence of coloured lights highlighted, and to repeat them in the same 
 order as shown.  The lights are presented round by round, and the number of lights shown increases with each 
@@ -224,22 +225,27 @@ Each new feature had been tested after each stage of development within the CLOU
 										   player response (move to next round/win game) and incorrect player response (lose game).
 										   
 				3.	No Of Buttons Option - I used jasmine to test that this button toggled between 4 and 6 buttons, and displayed the correct number 
-				                           on the button itself.  Also check that the ui displayed the correct number of buttons selected.  I manually
-				                           tested this button myself also.
+				                           on the button itself.  Also check that the ui displayed the correct number of buttons selected. (You can run this test
+				                           by selecting indexNoOfButtons.html, and clicking Run from the Menu Bar.  You now need to select the link provided at the 
+				                           bottom of the cloud9 screen).  I have manually tested this button also.
 				                           
 				4	No Of Rounds Option  - I used jasmine to test that this button toggled in increments of 5, from 5 to 60 and then back to 5
 				                           again.  Jasmine was also used to check that the array of button clicks was the correct length according
-				                           to the number of rounds.  I manually tested this button also.
+				                           to the number of rounds. (You can run this test by selecting indexNoOfRounds.html, and clicking Run from the Menu Bar.  
+				                           You now need to select the link provided at the bottom of the cloud9 screen).  I manually tested this button also.
 				                           
 				5.  Direction Option     - I used jasmine to test that this button toggled between forward and reverse direction on clicking it.  Also
-				                           check that the information on the button updated to show that the correct direction selected.  I manually tested
-				                           this button also.
+				                           check that the information on the button updated to show that the correct direction selected.  (You can run this test
+				                           by selecting indexLabelDirButton.html , and clicking Run from the Menu Bar.  You now need to select the link provided at 
+				                           the bottom of the cloud9 screen).  I manually tested this button also.
 				                           
-				6.  PlayButton           - I used jasmine to test that this function returned the correct colour when the button number was given as input.  I 
-										   also checked this was working by playing the game with a predefined array.
+				6.  PlayButton           - I used jasmine to test that this function returned the correct colour when the button number was given as input. (You 
+										   can run this test by selecting indexPlayButton.html, and clicking Run from the Menu Bar.  You now need to select the 
+										   link provided at the bottom of the cloud9 screen).  I also checked this was working by playing the game with a predefined array.
 										   
 				7.	playArray            - I used jasmine to test that this function returned an array of the correct length, according to the number of rounds   
-				                           selected.
+				                           selected.   (You can run this test by selecting indexArrayLength.html, and clicking Run from the Menu Bar. You now need to 
+				                           select the link provided at the bottom of the cloud9 screen)
 				                         
 				                         - I also tried to use jasmine to test that each element of the playArray held a number from 0 to 3, but was unable to 
 				                           get this to work.  However during development and testing I have had this value being printed to the console and this
