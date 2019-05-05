@@ -1,115 +1,144 @@
 .center-item {
-  text-align: center; }
+	text-align: center;
+}
 
 #page-title {
-  font-family: sans-serif;
-  font-size: 4vmin;
-  display: flex;
-  justify-content: center;
-  color: white;
-  padding: 0;
-  margin: 0;
-  height: 10vh;
-  width: 100vw;
-  background-color: black; }
+	font-family: sans-serif;
+	font-size: 4vmin;
+	display: flex;
+	justify-content: center;
+	color: white;
+	padding: 0;
+	margin: 0;
+	height: 10vh;
+	width: 100vw;
+	background-color: black;
+}
 
 #page {
-  height: 80vh;
-  width: 100vw;
-  margin: 0;
-  padding: 0; }
+	height: 80vh;
+	width: 100vw;
+	margin: 0;
+	padding: 0;
+}
 
 #button-panel {
-  display: flex;
-  justify-content: center;
-  width: 100vw;
-  padding: 0;
-  margin: 0;
-  background-color: black; }
+	display: flex;
+	justify-content: center;
+	width: 100vw;
+	padding: 0;
+	margin: 0;
+	background-color: black;
+}
 
 #options-panel {
-  background-color: darkgrey;
-  display: flex;
-  justify-content: center;
-  width: 100vw;
-  height: 10vmin;
-  font-family: sans-serif;
-  font-size: 4vmin;
-  color: red;
-  justify-content: center; }
+	background-color: darkgrey;
+	display: flex;
+	justify-content: center;
+	width: 100vw;
+	height: 10vmin;
+	font-family: sans-serif;
+	font-size: 4vmin;
+	color: red;
+}
 
 footer {
-  height: 10vh; }
+	height: 10vh;
+}
 
-.red-button-style:hover, .yellow-button-style:hover, .green-button-style:hover, .blue-button-style:hover, .purple-button-style:hover, .brown-button-style:hover {
-  opacity: 0.6;
-  transition: opacity .5s ease-in-out; }
+.red-button-style:hover,
+.yellow-button-style:hover,
+.green-button-style:hover,
+.blue-button-style:hover,
+.purple-button-style:hover,
+.brown-button-style:hover {
+	opacity: 0.6;
+	transition: opacity .5s ease-in-out;
+}
 
-.red-button-style, .yellow-button-style, .green-button-style, .blue-button-style, .purple-button-style, .brown-button-style {
-  border: 1vmin solid grey;
-  border-radius: 50%;
-  margin: 10vmin;
-  display: flex;
-  justify-content: left;
-  opacity: 0.5; }
+.red-button-style,
+.yellow-button-style,
+.green-button-style,
+.blue-button-style,
+.purple-button-style,
+.brown-button-style {
+	border: 1vmin solid grey;
+	border-radius: 50%;
+	margin: 10vmin;
+	display: flex;
+	justify-content: flex-start;
+	opacity: 0.5;
+}
 
 .red-button-style {
-  background-color: red; }
+	background-color: red;
+}
 
 .yellow-button-style {
-  background-color: orange; }
+	background-color: orange;
+}
 
 .green-button-style {
-  background-color: green; }
+	background-color: green;
+}
 
 .blue-button-style {
-  background-color: darkblue; }
+	background-color: darkblue;
+}
 
 .purple-button-style {
-  background-color: purple; }
+	background-color: purple;
+}
 
 .brown-button-style {
-  background-color: brown; }
+	background-color: brown;
+}
 
 #start-panel {
-  display: flex;
-  justify-content: space-around;
-  font-family: sans-serif;
-  font-size: 4vmin;
-  color: red; }
+	display: flex;
+	justify-content: space-around;
+	font-family: sans-serif;
+	font-size: 4vmin;
+	color: red;
+}
 
 #start-button {
-  background-color: lightgreen;
-  color: black;
-  border-radius: 10px;
-  width: 20vmin;
-  height: 6vmin;
-  font-size: 4vmin;
-  margin: auto;
-  vertical-align: middle; }
+	background-color: lightgreen;
+	color: black;
+	border-radius: 10px;
+	width: 20vmin;
+	height: 6vmin;
+	font-size: 4vmin;
+	margin: auto;
+	vertical-align: middle;
+}
 
 #start-button:hover {
-  background-color: #87D37C;
-  transition: background-color .5s ease-in-out; }
+	background-color: #87D37C;
+	transition: background-color .5s ease-in-out;
+}
 
 #Direction-Button,
 #No-Of-Buttons,
 #Rounds-Button {
-  background-color: white;
-  color: black;
-  border-radius: 5px;
-  width: 20vmin;
-  height: 5vmin;
-  font-size: 2vmin;
-  float: left;
-  margin: 2vmin;
-  display: flex;
-  justify-content: center; }
+	background-color: white;
+	color: black;
+	border-radius: 5px;
+	width: 20vmin;
+	height: 5vmin;
+	font-size: 2vmin;
+	float: left;
+	margin: 2vmin;
+	display: flex;
+	justify-content: center;
+}
 
 #Direction-Button:hover,
 #No-Of-Buttons:hover,
 #Rounds-Button:hover {
-  background-color: yellow;
-  transition: background-color .5s ease-in-out; }
+	background-color: orange;
+	transition: background-color .5s ease-in-out;
+}
+
 
 /*# sourceMappingURL=style.css.map */

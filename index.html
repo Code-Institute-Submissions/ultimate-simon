@@ -1,145 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-	<link rel="stylesheet" href="css/stylesheets/style.css" type="text/css" />
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-
-	<script rel="text/javascript" src="cdn/jQuery/jquery-3.3.1.js"></script>
-	<script rel="text/javascript" src="js/app-state.js"></script>
-	<script rel="text/javascript" src="js/ui-logic/ui.js"></script>
-	<script rel="text/javascript" src="js/game-logic/game.js"></script>
-	<script rel="text/javascript" src="cdn/Tone/tone.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
-
-
-	<title>Ultimate Simon</title>
-</head>
-
-<header>
-
-	<!-- JQuery Modal Adapted from code at jQueryModal.com -->
-	<div id="ex1" class="modal">
-		<span id="Wiki">
-				<a href="https://en.wikipedia.org/wiki/Simon_(game)" target="_blank"><i class="fab fa-wikipedia-w" aria-hidden="true"></i>ikipedia</a>
-		</span>
-		<p></p>
-		<p>The Rules To Simon Are Very Straight Forward. The Idea Of The Game Is To Repeat The Sequence Of Lights That Are Shown, By Clicking Them In The Same Sequence When Prompted To Repeat.</p>
-		<p>You Win The Game By Repeating Back The Complete Sequence, Set By The No Of Rounds Button At The Bottom Left Of The Home Page.</p>
-		<p>If The Direction Button At The Bottom Centre Of The Page Is Set To "Fwd", You Repeat The Buttons Back In The Same Sequence. To Make The Task Harder, This Button Can Be Set To "Rev", So You Have To Repeat Them Back In Reverse Order.</p>
-		<p>If You Want More Of A Challenge Still, The Number Of Buttons Can Be Increased From 4 Buttons To 6 Buttons.</p>
-		<p>For More Information On The History Of The Simon Game, Click On The Wikipedia Link Above To Look At Wikipedia's Information On The Game.</p>
-		<p></p>
-		<span id="close">
-				<a href="#" rel="modal:close">Close</a>
-		</span>
-
-
-	</div>
-
-	<div id="start-panel">
-
-		<button id="start-button" onclick="initiate()">Start</button>
-
-		<!-- Link to open the modal -->
-
-		<p><a href="#ex1" rel="modal:open"><i class="fa fa-info-circle" aria-hidden="true"></i></a></p>
-
-	</div>
-	<!--start-panel-->
-
-	<script>
-		$(document).ready(function() {
-			labelRoundsButton(gameParameters.noOfRounds);
-			labelDirectionButton(gameParameters.playForward);
-			labelNoOfButtons(gameParameters.noOfButtons);
-		});
-	</script>
-
-</header>
-
-<body>
-
-	<div id="button-panel">
-		<div class="row">
-			<div id="green-button" class="green-button-style simon-button" data-myval="1">
-
-			</div>
-			<!--green-button-->
-
-			<div id="yellow-button" class="yellow-button-style simon-button" data-myval="2">
-
-			</div>
-			<!--yellow-button-->
-
-			<div id="purple-button-portrait" class="purple-button-style simon-button" data-myval="4">
-
-			</div>
-			<!--purple-button-->
-		</div>
-		<!--Row-->
-
-		<div class="row">
-
-			<div id="red-button" class="red-button-style simon-button" data-myval="0">
-
-			</div>
-			<!--red-button-->
-
-			<div id="blue-button" class="blue-button-style simon-button" data-myval="3">
-
-			</div>
-			<!--blue-button-->
-
-			<div id="brown-button-portrait" class="brown-button-style simon-button" data-myval="5">
-
-			</div>
-			<!--brown-button-->
-
-
-		</div>
-		<!--Row-->
-
-		<div class="row">
-
-			<div id="purple-button-landscape" class="purple-button-style simon-button" data-myval="4">
-
-			</div>
-			<!--purple-button-->
-
-			<div id="brown-button-landscape" class="brown-button-style simon-button" data-myval="5">
-
-			</div>
-			<!--brown-button-->
-
-		</div>
-		<!--Row-->
-
-
-	</div>
-	<!-- button-panel -->
-
-
-
-
-	<div id="options-panel">
-
-
-		<button id="Rounds-Button" onclick="adjustRounds(gameParameters.noOfRounds)"></button>
-
-		<button id="Direction-Button" onclick="adjustDirection(gameParameters.playForward)"></button>
-
-		<button id="No-Of-Buttons" onclick="adjustNoOfButtons(gameParameters.noOfButtons)"></button>
-
-	</div>
-	<!--options-panel-->
-
-
-</body>
-
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <link rel="stylesheet" href="css/stylesheets/style.css" type="text/css" />
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+      <script rel="text/javascript" src="cdn/jQuery/jquery-3.3.1.js"></script>
+      <script rel="text/javascript" src="js/app-state.js"></script>
+      <script rel="text/javascript" src="js/ui-logic/ui.js"></script>
+      <script rel="text/javascript" src="js/game-logic/game.js"></script>
+      <script rel="text/javascript" src="cdn/Tone/tone.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+      <title>Ultimate Simon</title>
+   </head>
+   <header>
+      <!-- JQuery Modal Adapted from code at jQueryModal.com -->
+      <div id="ex1" class="modal">
+         <span id="Wiki">
+         <a href="https://en.wikipedia.org/wiki/Simon_(game)" target="_blank"><i class="fab fa-wikipedia-w" aria-hidden="true"></i>ikipedia</a>
+         </span>
+         <p></p>
+         <p>The Rules To Simon Are Very Straight Forward. The Idea Of The Game Is To Repeat The Sequence Of Lights That Are Shown, By Clicking Them In The Same Sequence When Prompted To Repeat.</p>
+         <p>You Win The Game By Repeating Back The Complete Sequence, Set By The No Of Rounds Button At The Bottom Left Of The Home Page.</p>
+         <p>If The Direction Button At The Bottom Centre Of The Page Is Set To "Fwd", You Repeat The Buttons Back In The Same Sequence. To Make The Task Harder, This Button Can Be Set To "Rev", So You Have To Repeat Them Back In Reverse Order.</p>
+         <p>If You Want More Of A Challenge Still, The Number Of Buttons Can Be Increased From 4 Buttons To 6 Buttons.</p>
+         <p>For More Information On The History Of The Simon Game, Click On The Wikipedia Link Above To Look At Wikipedia's Information On The Game.</p>
+         <p></p>
+         <span id="close">
+         <a href="#" rel="modal:close">Close</a>
+         </span>
+      </div>
+      <div id="start-panel">
+         <button id="start-button" onclick="initiate()">Start</button>
+         <!-- Link to open the modal -->
+         <p><a href="#ex1" rel="modal:open"><i class="fa fa-info-circle" aria-hidden="true"></i></a></p>
+      </div>
+      <!--start-panel-->
+      <script>
+         $(document).ready(function() {
+         	labelRoundsButton(gameParameters.noOfRounds);
+         	labelDirectionButton(gameParameters.playForward);
+         	labelNoOfButtons(gameParameters.noOfButtons);
+         });
+      </script>
+   </header>
+   <body>
+      <div id="button-panel">
+         <div class="row">
+            <div id="green-button" class="green-button-style simon-button" data-myval="1">
+            </div>
+            <!--green-button-->
+            <div id="yellow-button" class="yellow-button-style simon-button" data-myval="2">
+            </div>
+            <!--yellow-button-->
+            <div id="purple-button-portrait" class="purple-button-style simon-button" data-myval="4">
+            </div>
+            <!--purple-button-->
+         </div>
+         <!--Row-->
+         <div class="row">
+            <div id="red-button" class="red-button-style simon-button" data-myval="0">
+            </div>
+            <!--red-button-->
+            <div id="blue-button" class="blue-button-style simon-button" data-myval="3">
+            </div>
+            <!--blue-button-->
+            <div id="brown-button-portrait" class="brown-button-style simon-button" data-myval="5">
+            </div>
+            <!--brown-button-->
+         </div>
+         <!--Row-->
+         <div class="row">
+            <div id="purple-button-landscape" class="purple-button-style simon-button" data-myval="4">
+            </div>
+            <!--purple-button-->
+            <div id="brown-button-landscape" class="brown-button-style simon-button" data-myval="5">
+            </div>
+            <!--brown-button-->
+         </div>
+         <!--Row-->
+      </div>
+      <!-- button-panel -->
+      <div id="options-panel">
+         <button id="Rounds-Button" onclick="adjustRounds(gameParameters.noOfRounds)"></button>
+         <button id="Direction-Button" onclick="adjustDirection(gameParameters.playForward)"></button>
+         <button id="No-Of-Buttons" onclick="adjustNoOfButtons(gameParameters.noOfButtons)"></button>
+      </div>
+      <!--options-panel-->
+   </body>
 </html>
